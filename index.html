@@ -30,12 +30,11 @@
         /* Hero Section */
         .hero-section {
             position: relative;
-            min-height: 100vh;
+            height: 896px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            padding: 80px 20px;
         }
         
         .hero-bg {
@@ -56,34 +55,7 @@
             z-index: 10;
             text-align: center;
             padding: 0 20px;
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
         }
-
-        .hero-decoration,
-        .couple-names-svg,
-        .date-svg {
-            display: block;
-            height: auto;
-            max-width: 100%;
-        }
-
-        .hero-decoration {
-            width: min(404px, 80vw);
-            margin: 0 auto 28px;
-        }
-
-        .couple-names-svg {
-            width: min(720px, 92vw);
-            margin: 0 auto 36px;
-        }
-
-        .date-svg {
-            width: min(192px, 42vw);
-            margin: 0 auto 20px;
-        }
-
         
         .rings-icon {
             margin: 0 auto 32px;
@@ -168,9 +140,8 @@
         }
         
         .map-button {
-            display: inline-block;
             background: #111;
-            color: #fff;
+            color: white;
             padding: 12px 32px;
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
@@ -178,22 +149,10 @@
             cursor: pointer;
             transition: background 0.3s ease;
             letter-spacing: 0.5px;
-            text-decoration: none;
-            -webkit-text-decoration: none;
         }
         
         .map-button:hover {
             background: #333;
-            color: #fff;
-            text-decoration: none;
-            -webkit-text-decoration: none;
-        }
-        .map-button:visited,
-        .map-button:focus,
-        .map-button:active {
-            color: #fff;
-            text-decoration: none;
-            -webkit-text-decoration: none;
         }
         
         /* Reception Section */
@@ -362,127 +321,37 @@
         }
         
         @media (max-width: 768px) {
-            .hero-section {
-                min-height: auto;
-                padding: 100px 20px 80px;
-            }
-
-            .hero-decoration {
-                width: min(404px, 84vw);
-                margin-bottom: 20px;
-            }
-
-            .couple-names-svg {
-                width: 92vw;
-                margin-bottom: 24px;
-            }
-
-            .date-svg {
-                width: min(192px, 48vw);
-                margin-bottom: 18px;
-            }
-
-            .hero-text {
-                font-size: 18px;
-                line-height: 28px;
-                margin-bottom: 32px;
-            }
-
-            .invitation-text {
-                font-size: 16px;
-                line-height: 24px;
-            }
-
             .couple-names, .final-names {
                 font-size: 56px;
             }
-
+            
             .section-title {
                 font-size: 36px;
-                line-height: 1.2;
             }
-
+            
             .wedding-date {
                 font-size: 32px;
             }
-
+            
             .countdown-number {
                 font-size: 48px;
             }
-
+            
             .countdown-timer {
-                gap: 24px;
-                flex-wrap: wrap;
+                gap: 32px;
             }
-
+            
             .families-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
             }
-
-            .countdown-section {
-                min-height: 600px;
-                height: auto;
-                padding: 80px 20px;
+            
+            .hero-section, .countdown-section {
+                height: 600px;
             }
-
+            
             .reception-section {
-                min-height: 400px;
-                height: auto;
-                padding: 80px 20px;
-            }
-
-            .container {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-decoration {
-                width: 88vw;
-            }
-
-            .couple-names-svg {
-                width: 94vw;
-            }
-
-            .date-svg {
-                width: min(192px, 56vw);
-            }
-
-            .hero-text {
-                font-size: 16px;
-                line-height: 26px;
-            }
-
-            .invitation-text {
-                font-size: 15px;
-                line-height: 22px;
-            }
-
-            .section-title {
-                font-size: 30px;
-            }
-
-            .section-text,
-            .time-text {
-                font-size: 17px;
-                line-height: 28px;
-            }
-
-            .countdown-number {
-                font-size: 40px;
-            }
-
-            .countdown-label {
-                font-size: 13px;
-            }
-
-            .map-button,
-            .calendar-button {
-                width: 100%;
-                max-width: 320px;
-                text-align: center;
+                height: 400px;
             }
         }
     </style>
@@ -615,7 +484,7 @@
         <h2 class="section-title">Οι Οικογένειες</h2>
         <div class="families-grid">
             <div class="family-text">
-                <p>Βάιου Γιαμουγιάννη</p>
+                <p>Βάτου Γιαμουγιάννη</p>
                 <p>& Μαρίας Μιχαλέλη</p>
             </div>
             <div class="family-text">
@@ -691,7 +560,7 @@
 
 <section class="calendar-section" style="text-align:center;padding:80px 20px;background:#F6F6F6;">
     <h2 style="font-family:'Playfair Display',serif;font-size:36px;margin-bottom:30px;">
-        Σας περιμένουμε!
+        Προσθέστε την Τελετή στο Ημερολόγιο
     </h2>
 
     <button class="calendar-button" onclick="downloadCalendar()">
@@ -699,7 +568,7 @@
     </button>
 
     <p style="margin-top:40px;font-family:'Poppins',sans-serif;font-size:18px;line-height:1.6;color:#111;">
-        Παρακαλούμε ενημερώστε μας για την παρουσία σας έως τις 20/04/2026<br>
+        Παρακαλούμε ενημερώστε μας για την παρουσία σας έως τις 30/04/2026<br>
         στα τηλέφωνα 6981991943 & 6981174660
     </p>
 </section>
@@ -734,7 +603,6 @@ document.body.removeChild(link);
 
 <style>
 .calendar-button {
-    display:inline-block;
     background:#111;
     color:#fff;
     border:none;
@@ -743,20 +611,9 @@ document.body.removeChild(link);
     font-size:16px;
     cursor:pointer;
     transition:background .3s ease;
-    text-decoration:none;
-    -webkit-text-decoration:none;
 }
 .calendar-button:hover {
     background:#333;
-}
-.calendar-button,
-.calendar-button:hover,
-.calendar-button:focus,
-.calendar-button:active,
-.calendar-button:visited {
-    color:#fff;
-    text-decoration:none;
-    -webkit-text-decoration:none;
 }
 </style>
 
